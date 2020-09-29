@@ -1,0 +1,13 @@
+Begin by finding the minimum and maximum value in the rating_count_tot column.
+
+Extract the values in the rating_count_tot column (index number 5) in a separate list (don't forget to convert to integer or float).
+Find out the minimum and maximum value of that list using the min() and the max() commands.
+Based on the minimum and maximum value you've found, choose a few intervals (try to choose five intervals or less).
+
+We've disabled answer checking for this exercise to give you the freedom to choose the intervals you find suitable (there's not a fixed solution for this exercise). You can see the intervals we chose in the solution.
+Once you've chosen the intervals, compute the frequency of apps for each interval. Store the frequency table in a dictionary.
+
+Create a dictionary with intervals as dictionary keys and zeros as dictionary values.
+Loop through the apps_data data set. Count the frequency of each interval using an if statement followed by a series of elif clauses.
+Inspect the frequency table and analyze the results.
+
