@@ -16,25 +16,32 @@ apps_data = list(read_file)
 #########################################
 #########################################
 # 1.find min and max values of rating_count_tot
-ratings = {}
+num_user_ratings = [] 
 
 for row in apps_data[1:]:
-    ratings = int(row[5])
+    num_user_ratings.append(int(row[5]))
     
-# print(number_of_ratings)
-# print(type(num_of_ratings))
-max_value = max(num_of_ratings)
-print(max(num_of_ratings))
-# choose at least five intervals
-
+# print(num_user_ratings[2])
+# print(len(num_user_ratings))
+max_value = max(num_user_ratings)
+min_value = min(num_user_ratings)
+# print(max_value)
+# print(min_value)
+# choose at three interval ranges
+user_ratings_frequency = {'0 - 500000': 0, '500000 - 1500000': 0, '1500000 - 3000000': 0}
+# print(user_ratings_frequency)
+#print(type(user_ratings_frequency))
 # compute the frequency of apps for each interval 
+for row in apps_data[1:]:
+    user_ratings = int(row[5])
 
-# store frequency table in a dictionary
-# interval are the keys with a value of zero
+    if user_ratings <= 1000:
+        user_ratings_frequency['0 - 500000'] += 1
+        
+    elif 500000 < user_ratings <= 1500000:
+        user_ratings_frequency['500000 - 1500000'] += 1
 
-# count the frequency of each interval in apps_date(if/elif)
+    elif 1500000 < user_ratings <= 3000000:
+        user_ratings_frequency['1500000 - 3000000'] += 1
 
-# review results
-
-
-
+print(user_ratings_frequency)
