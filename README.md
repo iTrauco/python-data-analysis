@@ -1,3 +1,3 @@
 # README.md
 
-This repo is focused on data analysis w/ python.
+This branch houses practice-session code and the final_solution.py to the requirements listed in challenge.txt.
